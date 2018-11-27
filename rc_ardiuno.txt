@@ -1,0 +1,46 @@
+
+int motorpin4=5;
+int motorpin1=6;
+int motorpin3=2;
+int motorpin2=3;
+void setup() {
+  pinMode(motorpin1,OUTPUT);
+  pinMode(motorpin2,OUTPUT);
+  pinMode(8,INPUT);
+  pinMode(9,INPUT);
+  pinMode(10,INPUT);
+  pinMode(11,INPUT);
+  pinMode(motorpin3,OUTPUT);
+  pinMode(motorpin4,OUTPUT);
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+}
+
+void loop() {
+ 
+  
+ 
+  if(digitalRead(8)==HIGH){digitalWrite(motorpin1,1);}
+  
+  if(digitalRead(9)==HIGH)
+  {Serial.print(2); digitalWrite(motorpin2,1);}
+  //else digitalWrite(motorpin2,0);
+ // delay(350);
+ // {digitalWrite(motorpin1,1);}}
+  if(digitalRead(10)==HIGH)
+  {Serial.print(3);digitalWrite(motorpin3,1);}
+  //else digitalWrite(motorpin3,1);//digitalWrite(motorpin4,0);}
+  if(digitalRead(11)==HIGH)
+  {Serial.print(4);digitalWrite(motorpin4,1);}
+  //else digitalWrite(motorpin4,1);//digitalWrite(motorpin4,1);}
+  while(!digitalRead(8)&&!digitalRead(9)&&!digitalRead(10)&&!digitalRead(11))
+  {
+
+{digitalWrite(motorpin1,0);
+digitalWrite(motorpin2,0);
+digitalWrite(motorpin4,0);
+digitalWrite(motorpin3,0);
+  digitalWrite(12,0);}}
+  // put your main code here, to run repeatedly:*/
+
+}
